@@ -2,11 +2,11 @@ import sqlite3
 import time
 
 try:
-    sqliteConn = sqlite3.connect("sql_python.db")     #DB will create
+    sqliteConn = sqlite3.connect("sql_python2.db")     #DB will create
     cursor = sqliteConn.cursor()
     print("___DB created___")
 
-    my_execution = sqliteConn.execute ("""create table Netzwerk5('ID' integer, 'Name' text, 'EmailId' string, 'Contact_Number' integer, 'salary' integer)""")  # Table will create
+    my_execution = sqliteConn.execute ("""create table NetzwerkDB('ID' integer, 'Name' text, 'EmailId' string, 'Contact_Number' integer, 'salary' integer)""")  # Table will create
 
     # def insert_data_into_table():
     #     data = input("plz add the contents into table: ")
@@ -14,13 +14,14 @@ try:
 
     
     
-    sql_insert = """ INSERT INTO Netzwerk5
+    sql_insert = """ INSERT INTO NetzwerkDB
                  (ID, Name, EmailId, Contact_Number, salary)
                
-                VALUES (1, 'Akshaykumar', 123456789, 40000) """
+                VALUES 
+                (1, 'Akshaykumar', 'akshay@mail.com', 123456789, 40000) """
     
-    VALUES = input("Plz enter the data: ")
-    wait = time.sleep(5)
+    # VALUES = input("Plz enter the data: ")
+    # wait = time.sleep(5)
     count = cursor.execute(sql_insert)
     sqliteConn.commit()
     print("Data has been inserted into the Table ",cursor.rowcount)
