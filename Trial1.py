@@ -8,8 +8,8 @@ try:
 
     my_execution = sqliteConn.execute ("""create table Netzwerk5('ID' integer, 'Name' text, 'EmailId' string, 'Contact_Number' integer, 'salary' integer)""")  # Table will create
 
-    def insert_data_into_table():
-        data = input("plz add the contents into table: ")
+    # def insert_data_into_table():
+    #     data = input("plz add the contents into table: ")
         
 
     
