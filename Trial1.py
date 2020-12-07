@@ -17,7 +17,7 @@ try:
     sql_insert = """ INSERT INTO Netzwerk5
                  (ID, Name, EmailId, Contact_Number, salary)
                
-                VALUES () """
+                VALUES (1, 'Akshaykumar', 123456789, 40000) """
     
     VALUES = input("Plz enter the data: ")
     wait = time.sleep(5)
